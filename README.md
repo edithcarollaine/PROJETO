@@ -11,7 +11,7 @@ Django
 # Banco de dados: 
 SQLite3
 
-# Funcionlidades:
+# Funcionalidades:
 Perfil
 Cadastro
 Login
