@@ -1,9 +1,9 @@
 # Site simples nomeado: Site de cursos gratuitos universitários
 
 # Linguagens utilizadas:
-Python
-Html
-Css
+Python,
+Html,
+Css.
 
 # Framework:
 Django
@@ -12,9 +12,9 @@ Django
 SQLite3
 
 # Funcionalidades:
-Perfil
-Cadastro
-Login
-Criar curso
-Cursos
-Home
+Perfil,
+Cadastro,
+Login,
+Criar curso,
+Cursos,
+Home.
