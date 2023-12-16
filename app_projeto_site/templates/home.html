@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Página Inicial {% endblock title%}
+{% block content %}
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>EvenTuc</title>
+</head>
+
+<style>
+    .masthead {
+        position: relative;
+        background-color: #343a40;
+        background: url("{% static 'img/bg-masthead.jpg'%}") no-repeat center center;
+        background-size: cover;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    .showcase .showcase-text {
+        padding: 3rem;
+    }
+
+    .showcase .showcase-img {
+        min-height: 30rem;
+        background-size: cover;
+    }
+
+    @media (min-width: 768px) {
+        .showcase .showcase-text {
+            padding: 7rem;
+        }
+    }
+</style>
+
+
+<!-- Bloco Inicial Nome e background -->
+<div class="masthead">
+    <header class="masthead">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="">
+                    <div class="text-center text-white">
+                        <!-- Page heading-->
+                        <h1 class="mb-5"> EvenTuc, Conectando mentes brilhantes! </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Icons Grid-->
+    <section class="features-icons bg-light text-justify">
+        <div class="container">
+
+        </div>
+    </section>
+</div>
+
+<!-- Quem somos, Termos e Uso -->
+<div class="jumbotron">
+    <section class="showcase">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img"
+                    style="background-image: url({% static 'img/bg-showcase-1.jpg'%})"></div>
+                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                    <!--                        <h2>Impacto na Saúde</h2>-->
+                    <p class="lead mb-0">A <strong>EvenTuc</strong> é um hub para informações de eventos acadêmicos
+                        online no Brasil. Detalhamos conferências, workshops, seminários e mais, facilitando a
+                        conexão e expansão da sua rede acadêmica.</p>
+                    <br>
+                    <!--                        <a class="btn btn-primary" href="#">Inscreva-se</a>-->
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-6 text-white showcase-img"
+                    style="background-image: url({% static 'img/bg-showcase-2.jpg'%})"></div>
+                <div class="col-lg-6 my-auto showcase-text">
+                    <!--                        <h2>Lean Inception</h2>-->
+                    <p class="lead mb-0">Conecte-se com especialistas do mundo todo, aprenda novas habilidades
+                        e expanda seus horizontes sem sair de casa. Junte-se a nós na jornada do conhecimento digital!
+                    </p>
+                    <br>
+                    <!--                        <a class="btn btn-primary" href="#">Inscreva-se</a>-->
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img"
+                    style="background-image: url({% static 'img/bg-showcase-3.jpg' %})"></div>
+                <div class=" col-lg-6 order-lg-1 my-auto showcase-text">
+                    <!--                        <h2>Easy to Use & Customize</h2>-->
+                    <p class="lead mb-0">"Termos de Uso" são regras que usuários concordam para usar um serviço.
+                        Na Eventuc, incluem comportamento do usuário, política de privacidade,
+                        direitos autorais e uso de cookies. É crucial ler e entender antes de usar a plataforma.</p>
+                    <br>
+                    <!--                        <a class="btn btn-primary" href="#">Inscreva-se</a>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Bloco referente aos Editores do Projeto -->
+<div class="jumbotron">
+    <div class="container">
+        <h2 class="mb-5">Conheça nossa equipe</h2>
+        <div class="row text-justify">
+            <h6 class="mb-5">Somos uma equipe apaixonada e dedicada de desenvolvedores na EvenTuc, impulsionados pela
+                visão
+                de conectar mentes brilhantes. Com habilidades diversificadas e uma abordagem colaborativa, enfrentamos
+                desafios tecnológicos para criar soluções inovadoras que moldam o futuro dos eventos acadêmicos online
+                no
+                Brasil. Movidos pela paixão pela educação e tecnologia, trabalhamos incansavelmente para aprimorar a
+                experiência do usuário, promovendo a comunicação global entre acadêmicos e facilitando o acesso ao
+                conhecimento digital. Na EvenTuc, acreditamos que cada linha de código é uma oportunidade de impactar
+                positivamente a jornada acadêmica. Junte-se a nós enquanto transformamos ideias em realidade e
+                construímos o
+                caminho para um amanhã mais conectado e colaborativo.</h6>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-2 mx-auto mb-5">
+                <div class="testimonial-item">
+                    <img class="img-fluid rounded-circle mb-3" src="{% static 'img/edith.jpeg' %}" alt="..."
+                        style="max-width: 150px; max-height: 150px;" />
+                    <h5>Edith Carollaine</h5>
+                    <p class="font-weight-light mb-0">"Texto para a Edith."</p>
+                </div>
+            </div>
+            <div class="col-lg-2 mx-auto mb-5">
+                <div class="testimonial-item">
+                    <img class="img-fluid rounded-circle mb-3" src="{% static 'img/elaine.jpeg' %}" alt=" ..."
+                        style="max-width: 150px; max-height: 150px;" />
+                    <h5>Elaine Carvalho</h5>
+                    <p class="font-weight-light mb-0">"Texto para a Elaine."</p>
+                </div>
+            </div>
+            <div class="col-lg-2 mx-auto mb-5">
+                <div class="testimonial-item">
+                    <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Emily.jpeg' %}" alt="..."
+                        style="max-width: 150px; max-height: 150px;" />
+                    <h5>Emily Silva</h5>
+                    <p class="font-weight-light mb-0">"Texto para a Emily."</p>
+                </div>
+            </div>
+            <div class="col-lg-2 mx-auto mb-5">
+                <div class="testimonial-item">
+                    <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Ozzy.jpeg' %}" alt="..."
+                        style="max-width: 150px; max-height: 150px;" />
+                    <h5>Oseanes Farias</h5>
+                    <p class="font-weight-light mb-0">"Texto para a Ozzy."</p>
+                </div>
+            </div>
+            <div class="col-lg-2 mx-auto mb-5">
+                <div class="testimonial-item">
+                    <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pedro.jpg' %}" alt="..."
+                        style="max-width: 150px; max-height: 150px;" />
+                    <h5>Pedro Oscar</h5>
+                    <p class="font-weight-light mb-0">"Texto para o Pedro."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Rodapé-->
+<footer class="jumbotron text-center">
+    <p class="text-muted small mb-0">&copy; EvenTuc S.A. © Copyright 2023.</p>
+</footer>
+{% endblock content %}

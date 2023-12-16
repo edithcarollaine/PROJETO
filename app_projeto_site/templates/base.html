@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>{% block title %} {% endblock %} </title>
+</head>
+
+<body>
+  <nav id="menu-h">
+    <ul>
+      {%if user.is_authenticated %}
+      <li><a href="{%url 'profile'%}">Profile</li></a>
+      <li><a href="{%url 'criar' %}">Criar Curso</li></a>
+      <li><a href="{%url 'cursos'%}">Cursos</li></a>
+      <li><a href="{%url 'logout'%}">Sair</li></a>
+      <li><a href="/">Home</li></a>
+      {%else%}
+      <li><a href="{%url 'login' %}">Entrar</li></a>
+      <li><a href="{%url 'register' %}">Cadastrar</li></a>
+      <li><a href="/">Home</li></a>
+      {%endif%}
+    </ul>
+  </nav>
+  </nav>
+  {% block content %}{% endblock %}
+
+</body>
+
+</html>

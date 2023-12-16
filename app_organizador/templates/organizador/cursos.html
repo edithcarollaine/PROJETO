@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile_user.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+
+    <title>Cursos</title>
+</head>
+
+<body>
+
+    <nav id="menu-h">
+        <ul>
+            <li><a class="logo" href="{% url 'home' %}">Home</a></li>
+            <li><a class="header-logout" href="{% url 'home' %}">Voltar</a></li>
+        </ul>
+    </nav>
+    <div class="main-container" style="margin-top:  10px; margin-bottom: 30px;">
+        <!-- Ajusta a margem superior para reduzir o espaço -->
+        <p class="profile-page-teste text-center">Cursos</p>
+    </div>
+
+    <main class="main-container" style="margin-top:  50px; margin-bottom: 10px;">
+
+        <div>
+            <ul class=" list-unstyled">
+
+                {% for organizador in cursos %}
+                <li class="profile-page-heading">
+                    <label class="text-center uppercase-text">
+                        <strong class="text-center uppercase-text">{{organizador.titulo}}</strong>
+                    </label>
+
+                    <img src="{{organizador.evento_img.url}}" alt="User Image" class="center-img" width="512px"
+                        srcset="">
+                    <strong>Palestrante:</strong> {{organizador.palestrante}}<br>
+                    <strong>Descrição do Curso:</strong> {{organizador.desc}}<br>
+                    <a href="{{organizador.link}}">Link de Inscrição</a><br>
+                    <strong>Data do Evento:</strong> {{organizador.data}}<br>
+                    <hr class="line-border"> <!-- Adiciona uma linha divisória -->
+                    <br>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        </form>
+    </main>
+    <!--Rodapé-->
+    <br></br>
+    <footer class="jumbotron text-center">
+        <p class="text-muted small mb-0">&copy; EvenTuc S.A. © Copyright 2023.</p>
+    </footer>
+</body>
+
+</html>

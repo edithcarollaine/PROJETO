@@ -1,0 +1,69 @@
+{%load static%}
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{%static 'css/profile_user.css' %}">
+    <link rel="stylesheet" href="{%static 'css/profile.css' %}">
+
+    <title>Editar Usuário</title>
+</head>
+
+<body>
+    <nav id="menu-h">
+        <ul>
+            <li><a class="logo" href="{%url 'home' %}">Home</a></li>
+            <li><a class="logo" href="{%url 'profile' %}">Profile</a></li>
+            <li><a class="header-logout" href="{%url 'logout' %}">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-container" style="margin-top:  40px; margin-bottom: 30px;">
+        <form class='container' action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="profile-photo-container profile-photo-form-container">
+                <p class="profile-page-heading">Editar seu Perfil</p>
+                <img src={{user.profile.profile_img.url}} alt="User Image" width="" srcset="">
+                {{form.profile_img}}
+            </div>
+
+            <div class="user-content-container user-profile-form-container">
+                <ul>
+                    <li class="title">
+                        <label for="user-title">Seu nome</label>
+                        {{form.name}}
+                    <li class="title">
+                        <label for="user-title">Curso</label>
+                        {{form.curso}}
+                    </li>
+                    <li class="desc">
+                        <label for="user-desc">Biografia</label>
+                        {{form.bio}}
+                    </li>
+                </ul>
+                <button class="profile-save-button"> Salvar </button>
+                <div>
+                    <button class="profile-save-button text-center" type= 'reset' href="{%url 'profile'%}"> Cancelar </button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <!--Rodapé-->
+    <br></br>
+    <footer class="jumbotron text-center">
+        <p class="text-muted small mb-0">&copy; EvenTuc S.A. © Copyright 2023.</p>
+    </footer>
+</body>
+
+</html>
